@@ -16,6 +16,7 @@ import AboutPage from './components/About/AboutPage';
 import CareerPage from './components/Career/CareerPage';
 import LandingNavbar from './components/Navbar/Navbar';
 import Footer from './components/LandingPage/components/Footer';
+import EarlyBirdOffer from './components/LandingPage/components/EarlyBirdOffer';
 
 // Authentication Components
 import Login from "./Auth/Login";
@@ -48,6 +49,7 @@ function LandingPageLayout() {
         <Features />
         <Agents />
         <Roles />
+        <EarlyBirdOffer />
         <Testimonial />
       </main>
       <Footer />
@@ -126,17 +128,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

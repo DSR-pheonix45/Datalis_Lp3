@@ -150,7 +150,10 @@ function AuditorAgent() {
                 <button className="bg-[#0B1221] px-6 py-2 rounded text-sm border border-[#00FFD1]/20 hover:border-[#00FFD1] transition-colors">
                   <ShinyText text="Watch Demo" className="text-[#00FFD1]" speed={1} />
                 </button>
-                <button className="bg-[#0B1221] px-6 py-2 rounded text-sm border border-[#00FFD1]/20 hover:border-[#00FFD1] transition-colors">
+                <button 
+                  className="bg-[#0B1221] px-6 py-2 rounded text-sm border border-[#00FFD1]/20 hover:border-[#00FFD1] transition-colors"
+                  onClick={() => window.open('https://docs.google.com/document/d/1zdfwL1chbpnJ14MWGxDDRrRDU7wpc-_n/edit?usp=sharing&ouid=104426491086879883523&rtpof=true&sd=true', '_blank')}
+                >
                   <ShinyText text="Sample Report" className="text-[#00FFD1]" speed={1} />
                 </button>
               </div>
@@ -214,7 +217,10 @@ function TaxationAgent() {
                 <button className="bg-[#0B1221] px-6 py-2 rounded text-sm border border-[#00FFD1]/20 hover:border-[#00FFD1] transition-colors">
                   <ShinyText text="Try Now" className="text-[#00FFD1]" speed={1} />
                 </button>
-                <button className="bg-[#0B1221] px-6 py-2 rounded text-sm border border-[#00FFD1]/20 hover:border-[#00FFD1] transition-colors">
+                <button 
+                  className="bg-[#0B1221] px-6 py-2 rounded text-sm border border-[#00FFD1]/20 hover:border-[#00FFD1] transition-colors"
+                  onClick={() => window.open('https://docs.google.com/document/d/1zdfwL1chbpnJ14MWGxDDRrRDU7wpc-_n/edit?usp=sharing&ouid=104426491086879883523&rtpof=true&sd=true', '_blank')}
+                >
                   <ShinyText text="Sample Report" className="text-[#00FFD1]" speed={1} />
                 </button>
               </div>
@@ -250,3 +256,4 @@ function AdditionalAgentInfo() {
     </AnimatedBlock>
   );
 }
+

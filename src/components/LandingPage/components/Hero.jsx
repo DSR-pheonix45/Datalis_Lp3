@@ -82,7 +82,7 @@ export default function Hero() {
               transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
             >
               {/* Improved text layout for mobile */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 <span className="text-white block">Turn Data into</span>
                 <span className="text-white block mt-1">Actionable</span>
                 <span className="text-white block mt-1">Insights</span>
@@ -111,7 +111,7 @@ export default function Hero() {
             >
               <motion.button 
                 onClick={handleTryDatalis}
-                className="w-full sm:w-auto px-8 py-3 bg-[#00FFD1] rounded-full text-black font-medium text-lg hover:bg-[#00FFD1]/90 hover:shadow-[0_0_20px_rgba(0,255,209,0.4)]"
+                className="w-full sm:w-auto px-6 py-2.5 sm:px-8 sm:py-3 bg-[#00FFD1] rounded-full text-black font-medium text-base sm:text-lg hover:bg-[#00FFD1]/90 hover:shadow-[0_0_20px_rgba(0,255,209,0.4)]"
                 variants={buttonVariants}
                 initial="hidden"
                 animate="visible"
@@ -122,7 +122,7 @@ export default function Hero() {
               </motion.button>
               <motion.button 
                 onClick={() => window.open('https://huggingface.co/spaces/medhansh-k/Dabby', '_blank')}
-                className="w-full sm:w-auto px-8 py-3 border border-[#00FFD1] text-[#00FFD1] rounded-full font-medium text-lg hover:bg-[#00FFD1]/10"
+                className="w-full sm:w-auto px-6 py-2.5 sm:px-8 sm:py-3 border border-[#00FFD1] text-[#00FFD1] rounded-full font-medium text-base sm:text-lg hover:bg-[#00FFD1]/10"
                 variants={buttonVariants}
                 initial="hidden"
                 animate="visible"
@@ -338,6 +338,7 @@ export default function Hero() {
     </section>
   );
 }
+
 
 
 

@@ -114,26 +114,23 @@ export const customSignUp = async (email, password, username) => {
 
             if (isConnected) {
                 console.log('Using Supabase for signup');
-                const { data: authData, error: authError } = await supabase.auth.signUp({
+                const { data, error } = await supabase.auth.signUp({
                     email,
                     password,
                     options: {
-                        data: {
-                            username
-                        },
-                        // Enable email verification
-                        emailRedirectTo: `${window.location.origin}/login`
+                        data: { username },
+                        emailRedirectTo: window.location.origin + '/login'
                     }
                 });
 
-                if (!authError && authData?.user) {
+                if (!error && data?.user) {
                     console.log('User created in Supabase Auth');
 
                     // Create profile
                     const { error: profileError } = await supabase
                         .from('profiles')
                         .insert({
-                            id: authData.user.id,
+                            id: data.user.id,
                             email: email,
                             username: username,
                             password_hash: btoa(password),
@@ -150,14 +147,14 @@ export const customSignUp = async (email, password, username) => {
                         success: true,
                         message: 'Account created successfully! Please check your email to verify your account.',
                         user: {
-                            id: authData.user.id,
-                            email: authData.user.email,
+                            id: data.user.id,
+                            email: data.user.email,
                             user_metadata: { username: username }
                         }
                     };
                 } else {
-                    console.error('Auth signup error:', authError);
-                    return { success: false, error: authError?.message || 'Failed to create account' };
+                    console.error('Auth signup error:', error);
+                    return { success: false, error: error?.message || 'Failed to create account' };
                 }
             }
         } catch (error) {
@@ -305,6 +302,7 @@ export const customLogin = async (email, password) => {
 
 // Add an alias for customSignUp to handle potential case sensitivity issues
 export const customSignup = customSignUp;
+
 
 
 

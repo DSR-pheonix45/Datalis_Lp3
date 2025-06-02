@@ -8,7 +8,8 @@ import image3 from "../../../assets/3.png";
 import { useTheme } from '../../../context/ThemeContext';
 
 export default function Agents() {
-  const { isDark } = useTheme();
+  // Remove the unused isDark variable
+  // const { isDark } = useTheme();
   
   return (
     <section id="agents" className="px-6 pt-12 md:pt-16 pb-4 md:pb-8 bg-[#0B1221] relative transition-colors duration-300">
@@ -23,7 +24,8 @@ export default function Agents() {
 }
 
 function ConsultantAgent() {
-  const { isDark } = useTheme();
+  // Remove the unused isDark variable
+  // const { isDark } = useTheme();
   const steps = ['Budgeting', 'Planning', 'Risk Analysis', 'Forecasting'];
   
   return (
@@ -104,7 +106,8 @@ function ConsultantAgent() {
 }
 
 function AuditorAgent() {
-  const { isDark } = useTheme();
+  // Remove the unused isDark variable
+  // const { isDark } = useTheme();
   
   return (
     <AnimatedBlock delay={0.15}>
@@ -178,6 +181,7 @@ function AuditorAgent() {
                   className="bg-[#0B1221] border-[#00FFD1]/20 hover:border-[#00FFD1] px-6 py-2 rounded text-sm border transition-colors"
                   whileHover={{ y: -3, boxShadow: '0 10px 15px -3px rgba(0, 255, 209, 0.1)' }}
                   whileTap={{ y: 0 }}
+                  onClick={() => window.open('https://docs.google.com/document/d/1zdfwL1chbpnJ14MWGxDDRrRDU7wpc-_n/edit?usp=sharing&ouid=104426491086879883523&rtpof=true&sd=true', '_blank')}
                 >
                   <ShinyText text="Check Report" className="text-[#00FFD1]" speed={1} />
                 </motion.button>
@@ -281,6 +285,7 @@ function TaxationAgent() {
                   className="bg-[#070B14] border-[#00FFD1]/20 hover:border-[#00FFD1] px-6 py-2 rounded text-sm border transition-colors"
                   whileHover={{ y: -3, boxShadow: '0 10px 15px -3px rgba(0, 255, 209, 0.1)' }}
                   whileTap={{ y: 0 }}
+                  onClick={() => window.open('https://docs.google.com/document/d/1zdfwL1chbpnJ14MWGxDDRrRDU7wpc-_n/edit?usp=sharing&ouid=104426491086879883523&rtpof=true&sd=true', '_blank')}
                 >
                   <ShinyText text="Check Report" className="text-[#00FFD1]" speed={1} />
                 </motion.button>
@@ -299,6 +304,8 @@ function TaxationAgent() {
     </AnimatedBlock>
   );
 }
+
+
 
 
 
