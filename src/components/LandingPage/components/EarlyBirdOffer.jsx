@@ -104,7 +104,7 @@ export default function EarlyBirdOffer() {
                   onClick={() => window.open('https://razorpay.me/@datalis?amount=n%2FUUsdogj%2F7sarE2WD13qg%3D%3D', '_blank')}
                   className="w-full py-2.5 bg-white/10 text-white rounded-lg border border-white/20 hover:bg-white/20 transition-colors"
                 >
-                  Pay via Razorpay
+                  Claim offer via Razorpay
                 </button>
               </div>
             </div>
