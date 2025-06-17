@@ -121,7 +121,7 @@ export default function Hero() {
                 Try Datalis
               </motion.button>
               <motion.button 
-                onClick={() => window.open('https://huggingface.co/spaces/medhansh-k/Dabby', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/14ndlCHqP-clKc-pbo4KIeqxsP_7QCf6T/view?usp=sharing', '_blank')}
                 className="w-full sm:w-auto px-6 py-2.5 sm:px-8 sm:py-3 border border-[#00FFD1] text-[#00FFD1] rounded-full font-medium text-base sm:text-lg hover:bg-[#00FFD1]/10"
                 variants={buttonVariants}
                 initial="hidden"
@@ -129,7 +129,7 @@ export default function Hero() {
                 whileHover="hover"
                 whileTap={{ scale: 0.97 }}
               >
-                Try Dabby
+                View Walkthrough
               </motion.button>
             </motion.div>
           </div>
